@@ -20,9 +20,7 @@ GAP = 4
 STEP = CELL + GAP
 LEFT = 34     # weekday labels
 TOP = 24      # month labels
-# zero cell stays a neutral dark; levels 1-4 run a wider light-to-dark
-# green ramp so intensity reads at a glance (monotonic lightness)
-COLORS = ['#161b22', '#0a3d22', '#12793a', '#31c453', '#8cf5a8']
+COLORS = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
 WEEKDAYS = {1: 'Mon', 3: 'Wed', 5: 'Fri'}
 
 
