@@ -17,9 +17,9 @@ BG, BORDER = "#0d1117", "#21262d"
 TITLE, KEY, VAL, PROMPT = "#ffffff", "#79c0ff", "#c9d1d9", "#7ee787"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
-TITLE_LINE = "cypherlynx@github"
+TITLE_LINE = "x0d4n@github"
 ROWS: list[tuple[str, str]] = [
-    ("user", "CYPHERLYNX (X0D4N)"),
+    ("user", "X0D4N"),
     ("role", "final-year student · software developer"),
     ("focus", "cybersecurity enthusiast"),
     ("stack", "TypeScript · Electron · Python · Flask · SQLite"),
@@ -32,7 +32,7 @@ ROWS: list[tuple[str, str]] = [
 def build_svg() -> str:
     p = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
-        f'viewBox="0 0 {W} {H}" role="img" aria-label="about CYPHERLYNX">',
+        f'viewBox="0 0 {W} {H}" role="img" aria-label="about X0D4N">',
         f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="8" fill="{BG}" stroke="{BORDER}"/>',
         # title bar
         f'<g font-family="{MONO}" font-size="14">',

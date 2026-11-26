@@ -3,7 +3,7 @@
 Source: https://github.com/users/<username>/contributions — the same public
 HTML fragment the profile page itself uses. stdlib only.
 
-Usage: python scripts/fetch_contributions.py [username]   (default: CYPHERLYNX)
+Usage: python scripts/fetch_contributions.py [username]   (default: X0D4N)
 Writes: data/contributions.json
 """
 
@@ -17,7 +17,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "profile-art-bot/1.0 (+https://github.com/CYPHERLYNX)"
+UA = "profile-art-bot/1.0 (+https://github.com/X0D4N)"
 
 TD_RE = re.compile(r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*data-level="(\d)"')
 TIP_RE = re.compile(r"<tool-tip[^>]*>([^<]*)</tool-tip>")
@@ -49,7 +49,7 @@ def parse(html: str) -> tuple[list[dict], int]:
 
 
 def main() -> None:
-    username = sys.argv[1] if len(sys.argv) > 1 else "CYPHERLYNX"
+    username = sys.argv[1] if len(sys.argv) > 1 else "X0D4N"
     html = fetch(username)
     days, total = parse(html)
     out = {

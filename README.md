@@ -31,7 +31,7 @@
 
 <p><b>Final-year student · Software developer · Cybersecurity enthusiast</b></p>
 
-[![GitHub](https://img.shields.io/badge/GitHub-CYPHERLYNX-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CYPHERLYNX)
+[![GitHub](https://img.shields.io/badge/GitHub-X0D4N-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/X0D4N)
 
 <br>
 
