@@ -18,11 +18,11 @@
 <br>
 
 <!-- animated contribution graph: real data, cells pop in left to right
-     (regenerated daily by .github/workflows/update-profile-art.yml) -->
+     (refresh: python scripts/fetch_contributions.py && python scripts/render_heatmap_svg.py) -->
 
 <h3><code>x0d4n@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="860" alt="X0D4N's GitHub contribution graph — auto-refreshed daily" />
+<img src="./contrib-heatmap.svg" width="860" alt="X0D4N's GitHub contribution graph" />
 
 <br>
 <br>
