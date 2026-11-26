@@ -3,14 +3,18 @@
 
 Avi-style hero panel: the portrait types in line by line (SMIL).
 Regenerate locally when the photo changes:
-    python3 scripts/make_portrait_svg.py
+    python3 scripts/make_portrait_svg.py <photo> [output.svg]
+
+The source photo is private and intentionally not committed; pass its path.
 """
 from PIL import Image, ImageOps, ImageFilter
 import html
 import os
+import sys
 
-SRC = os.path.expanduser('~/workspace/profile-images/user-profile-reference.jpg')
-OUT = os.path.expanduser('~/workspace/profile-redesign/x0d4n-ascii.svg')
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'data', 'user-profile-reference.jpg')
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, 'x0d4n-ascii.svg')
 TITLE = 'x0d4n@github: ~$ ./portrait.sh'
 
 COLS = 100
@@ -50,6 +54,9 @@ def to_ascii(path):
 
 
 def main():
+    if not os.path.exists(SRC):
+        sys.exit(f'source photo not found: {SRC}\n'
+                 'pass it explicitly: python3 scripts/make_portrait_svg.py <photo> [output.svg]')
     lines = to_ascii(SRC)
     W = 840
     H = int(TOP + len(lines) * LINE_H + 26)

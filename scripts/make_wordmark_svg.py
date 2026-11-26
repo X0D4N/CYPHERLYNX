@@ -8,8 +8,10 @@ Regenerate locally when the wordmark changes:
 import pyfiglet
 import html
 import os
+import sys
 
-OUT = os.path.expanduser('~/workspace/profile-redesign/wordmark.svg')
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'wordmark.svg')
 TITLE = 'x0d4n@github: ~$ ./wordmark.sh --3d'
 TEXT = 'X0D4N'
 

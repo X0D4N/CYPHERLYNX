@@ -8,11 +8,12 @@ the yearly total caption match the GitHub look. Runs daily in CI:
 """
 import json
 import os
+import sys
 from datetime import date, timedelta
 
-BASE = os.path.expanduser('~/workspace/profile-redesign')
-DATA = os.path.join(BASE, 'data', 'contributions.json')
-OUT = os.path.join(BASE, 'contrib-heatmap.svg')
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, 'data', 'contributions.json')
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'contrib-heatmap.svg')
 
 CELL = 12
 GAP = 4
